@@ -11,7 +11,7 @@ const Write = () => {
     const [title, setTitle] = useState(state?.title || "");
     const [file, setFile] = useState(null);
     const [category, setCategory] = useState(state?.category || "");
-    const navigate = useNavigate
+    const navigate = useNavigate();
 
     const upload = async () => {
         try {
@@ -53,6 +53,7 @@ const Write = () => {
                 }, {withCredentials: true});
             }
 
+            navigate("/");
             
         } catch (err) {
             console.log("[ERROR while using handelSubmit file/data]");
